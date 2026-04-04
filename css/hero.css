@@ -84,6 +84,7 @@
   width: 2rem;
   height: 1px;
   background: var(--fg-muted);
+  
 }
 
 /* Big name */
@@ -146,7 +147,7 @@
   max-width: 460px;
   font-family: var(--font-mono);
   font-size: 14px;
-  line-height: 1.9;
+  /* line-height: 1.9; */
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.03em;
 }
@@ -188,4 +189,13 @@
   letter-spacing: 0.2em;
   opacity: 0;
   animation: fadeIn 1s 0.8s ease forwards;
+}
+
+.hero-line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  vertical-align: middle;
+  margin-right: 0.8rem;
 }
