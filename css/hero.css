@@ -92,7 +92,7 @@
     overflow: hidden;
   width: 100%;
   padding: 0rem 0;     /* ✅ remove 12rem */
-  margin-top: 4rem;    /* ✅ THIS pushes it to bottom */
+  margin-top: 3rem;    /* ✅ THIS pushes it to bottom */
 }
 
 .hero-name-inner {
