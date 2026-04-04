@@ -62,10 +62,14 @@ body {
 }
 
 .section-label::before {
-  content: attr(data-num);
-  color: var(--fg-dim);
+  content: '';
+  display: inline-block;
+  width: 3rem;
+  height: 1px;
+  background: var(--fg-muted);
+  vertical-align: middle;
+  margin-right: 1rem;
 }
-
 /* ── Scroll reveal base state ── */
 .reveal {
   opacity: 0;
