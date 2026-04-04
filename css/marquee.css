@@ -1,0 +1,35 @@
+/* ─────────────────────────────────
+   MARQUEE TICKER
+───────────────────────────────── */
+
+.marquee-wrap {
+  border-top: 1px solid var(--fg-dim);
+  border-bottom: 1px solid var(--fg-dim);
+  padding: 1.2rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-inner:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  padding: 0 3rem;
+}
+
+/* The ✦ separator dots */
+.marquee-dot {
+  color: var(--accent);
+}

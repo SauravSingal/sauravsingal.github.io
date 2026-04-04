@@ -1,0 +1,33 @@
+/* ─────────────────────────────────
+   ANIMATIONS & KEYFRAMES
+───────────────────────────────── */
+
+/* Hero name slides up from below */
+@keyframes slideUp {
+  from { transform: translateY(110%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* General fade + lift */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Simple fade */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scrolling marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Breathing scroll-line in hero */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
+  50%       { opacity: 1;   transform: scaleY(1);   }
+}

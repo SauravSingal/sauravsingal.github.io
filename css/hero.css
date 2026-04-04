@@ -1,0 +1,138 @@
+/* ─────────────────────────────────
+   HERO
+───────────────────────────────── */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem var(--page-gutter) 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* "Engineer & Builder" tag line */
+.hero-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.3s ease forwards;
+}
+
+.hero-tag::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: var(--fg-muted);
+}
+
+/* Big name */
+.hero-name-scroll {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.hero-name-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+/* Slow down or speed up by changing 10s ↑ */
+
+.hero-name-text {
+  font-family: var(--font-sans);
+  font-size: clamp(60px, 11vw, 140px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+}
+
+.hero-name-sep {
+  font-size: clamp(30px, 5vw, 60px);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-name .line {
+  display: block;
+  overflow: hidden;
+}
+
+.hero-name .word {
+  display: inline-block;
+  animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-name .line:nth-child(2) .word {
+  animation-delay: 0.12s;
+}
+
+/* Bottom row: description + scroll indicator */
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 3rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s 0.5s ease forwards;
+}
+
+.hero-desc {
+  max-width: 360px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--fg-muted);
+  letter-spacing: 0.03em;
+}
+
+/* Animated scroll line */
+.hero-scroll {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: var(--fg-muted);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+  transform-origin: top;
+}
+
+/* Vertical "2025 / Portfolio" watermark */
+.hero-watermark {
+  position: absolute;
+  right: var(--page-gutter);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  writing-mode: vertical-rl;
+  letter-spacing: 0.2em;
+  opacity: 0;
+  animation: fadeIn 1s 0.8s ease forwards;
+}

@@ -1,0 +1,23 @@
+/* ─────────────────────────────────
+   VARIABLES
+   Edit these to restyle the whole site
+───────────────────────────────── */
+
+:root {
+
+  /* COLOURS */
+  --bg:        #0a0a0a;   /* page background */
+  --fg:        #f0ede6;   /* primary text */
+  --fg-muted:  #6b6b6b;   /* secondary / dimmed text */
+  --fg-dim:    #2a2a2a;   /* subtle borders & lines */
+  --accent:    #c8ff00;   /* lime green highlight — change this to rebrand */
+
+  /* FONTS */
+  --font-sans: 'Syne', sans-serif;
+  --font-mono: 'Geist Mono', 'Courier New', monospace;
+
+  /* SPACING */
+  --section-padding: 8rem 3rem;
+  --page-gutter:     3rem;
+
+}

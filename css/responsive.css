@@ -1,0 +1,102 @@
+/* ─────────────────────────────────
+   RESPONSIVE — Mobile & Tablet
+   Breakpoint: 768px
+───────────────────────────────── */
+
+@media (max-width: 768px) {
+
+  /* ── Nav ── */
+  nav {
+    padding: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  /* ── Sections ── */
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  /* ── Projects ── */
+  .project {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* ── About ── */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 5rem 1.5rem;
+  }
+
+  /* ── Stats ── */
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid var(--fg-dim);
+    padding: 2rem 0;
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
+
+  /* ── Contact ── */
+  .contact {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .contact-top {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  /* ── Disable custom cursor on touch devices ── */
+  html {
+    cursor: auto;
+  }
+
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+
+}

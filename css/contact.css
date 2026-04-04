@@ -1,0 +1,85 @@
+/* ─────────────────────────────────
+   CONTACT
+───────────────────────────────── */
+
+.contact {
+  padding: 8rem var(--page-gutter) 6rem;
+  border-top: 1px solid var(--fg-dim);
+}
+
+/* Top row: big heading + links */
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6rem;
+}
+
+.contact-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--fg);
+}
+
+/* The accent-coloured word */
+.contact-heading .accent {
+  color: var(--accent);
+}
+
+/* Right side: email + social links */
+.contact-info {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 2.8;
+  color: var(--fg-muted);
+  text-align: right;
+}
+
+.contact-info a {
+  color: var(--fg);
+  transition: color 0.2s;
+  cursor: none;
+}
+
+.contact-info a:hover {
+  color: var(--accent);
+}
+
+/* Footer row */
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  border-top: 1px solid var(--fg-dim);
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+  transition: color 0.2s;
+  cursor: none;
+}
+
+.footer-links a:hover {
+  color: var(--fg);
+}

@@ -1,0 +1,129 @@
+/* ─────────────────────────────────
+   ABOUT
+───────────────────────────────── */
+
+.about {
+  padding: var(--section-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  border-top: 1px solid var(--fg-dim);
+}
+
+/* ── Left column: heading + bio + button ── */
+
+.about-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+  margin-bottom: 3rem;
+}
+
+/* Italic word inside heading */
+.about-heading em {
+  font-style: italic;
+  color: var(--fg-muted);
+  font-weight: 400;
+}
+
+.about-body {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 2;
+  color: var(--fg-muted);
+  margin-bottom: 3rem;
+}
+
+/* Highlighted words inside body text */
+.about-body strong {
+  color: var(--fg);
+  font-weight: 400;
+}
+
+/* "Get in touch" button */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg);
+  border: 1px solid var(--fg-dim);
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  cursor: none;
+}
+
+.cta-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.cta-btn:hover .btn-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* ── Right column: skills grid ── */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  padding: 1.5rem;
+  border: 1px solid var(--fg-dim);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  cursor: none;
+}
+
+.skill-item:hover {
+  border-color: var(--fg-muted);
+}
+
+.skill-name {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.4rem;
+}
+
+.skill-desc {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+}
+
+/* Accent bar that slides in on hover */
+.skill-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  width: 0;
+  transition: width 0.6s ease;
+}
+
+.skill-item:hover .skill-bar {
+  width: 100%;
+}

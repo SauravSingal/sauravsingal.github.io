@@ -1,0 +1,104 @@
+/* ─────────────────────────────────
+   WORK / PROJECTS
+───────────────────────────────── */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each project row */
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 0;
+  border-top: 1px solid var(--fg-dim);
+  cursor: none;
+  transition: border-color 0.3s;
+}
+
+.project:last-child {
+  border-bottom: 1px solid var(--fg-dim);
+}
+
+/* Hover: accent border */
+.project:hover {
+  border-top-color: rgba(200, 255, 0, 0.25);
+}
+
+/* Hover: accent number */
+.project:hover .project-num {
+  color: var(--accent);
+}
+
+/* Hover: arrow moves up-right */
+.project:hover .project-arrow {
+  transform: translate(4px, -4px);
+  color: var(--accent);
+}
+
+/* Left side: number + title + tags */
+.project-left {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.project-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  margin-top: 6px;
+  min-width: 2rem;
+  transition: color 0.3s;
+}
+
+.project-title {
+  font-family: var(--font-sans);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+/* Tech stack tags */
+.project-tags {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  border: 1px solid var(--fg-dim);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+/* Right side: year + arrow */
+.project-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.project-year {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+}
+
+.project-arrow {
+  font-size: 18px;
+  color: var(--fg-muted);
+  transition: transform 0.3s, color 0.3s;
+  line-height: 1;
+}

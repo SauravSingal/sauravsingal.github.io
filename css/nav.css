@@ -1,0 +1,52 @@
+/* ─────────────────────────────────
+   NAVIGATION
+───────────────────────────────── */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem var(--page-gutter);
+  transition: background 0.3s, backdrop-filter 0.3s, border-bottom 0.3s;
+}
+
+/* Logo — your initials */
+.nav-logo {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--fg);
+}
+
+/* Scrolled state — added via JS */
+nav.scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--fg-dim);
+}
