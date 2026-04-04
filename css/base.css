@@ -50,7 +50,7 @@ body {
 
 .section-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   color: var(--fg-muted);
   text-transform: uppercase;
@@ -58,6 +58,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .section-label::before {
