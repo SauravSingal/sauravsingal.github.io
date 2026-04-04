@@ -32,7 +32,7 @@
 /* Right side: email + social links */
 .contact-info {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 16px;
   line-height: 2.8;
   color: var(--fg-muted);
   text-align: right;
