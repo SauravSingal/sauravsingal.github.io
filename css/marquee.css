@@ -22,9 +22,9 @@
 
 .marquee-item {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.2em;
-  color: var(--fg-muted);
+  color: rgba(255, 255, 255, 0.5); 
   text-transform: uppercase;
   padding: 0 3rem;
 }
