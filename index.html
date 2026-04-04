@@ -34,7 +34,56 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="follower"></div>
 
+<div id="splash">
+  <div class="loading-words">
+    <h2 class="active">Hello<div class="dot"></div></h2>
+    <h2>Bonjour<div class="dot"></div></h2>
+    <h2 class="jap">おい<div class="dot"></div></h2>
+    <h2>Ciao<div class="dot"></div></h2>
+    <h2>Olá<div class="dot"></div></h2>
+    <h2>Guten tag<div class="dot"></div></h2>
+    <h2>Hallå<div class="dot"></div></h2>
+    <h2>Hallo<div class="dot"></div></h2>
+    <h2>स्वागत हे<div class="dot"></div></h2>
+  </div>
+</div>
+<script>
+  const words = document.querySelectorAll(".loading-words h2");
+  const splash = document.getElementById("splash");
 
+  let index = 0;
+
+  // show first word
+  words[index].classList.add("active");
+
+  function showNextWord() {
+    words[index].classList.remove("active");
+    index++;
+
+    if (index < words.length) {
+      words[index].classList.add("active");
+    } else {
+      clearInterval(interval);
+
+      words[words.length - 1].classList.add("active");
+
+      setTimeout(() => {
+  splash.classList.add("slide-up");
+
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 800);
+      }, 800);
+    }
+  }
+
+  // ⏸ shorter pause
+  setTimeout(() => {
+    showNextWord(); // 👈 instant switch (IMPORTANT)
+
+    interval = setInterval(showNextWord, 200);
+  }, 800); // try 200–300ms
+</script>
   <!-- ═══════════════════════════════
        NAVIGATION
   ═══════════════════════════════ -->
