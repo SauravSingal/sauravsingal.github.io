@@ -1,6 +1,54 @@
 /* ─────────────────────────────────
+   HERO MARQUEE
+───────────────────────────────── */
+
+const track = document.getElementById('hero-marquee');
+
+if (track) {
+  // Step 1: clone until we have 3x screen width
+  while (track.scrollWidth < window.innerWidth * 3) {
+    track.innerHTML += track.innerHTML;
+  }
+
+  // Step 2: measure AFTER cloning
+  const loopWidth = track.scrollWidth / 2;
+
+  let x           = 0;
+  let speed       = 1;
+  let targetSpeed = 1;
+
+  function tick() {
+    // Ease toward target direction
+    speed += (targetSpeed - speed) * 0.04;
+
+    // Never let it fully stop
+    if (Math.abs(speed) < 0.15) {
+      speed = 0.15 * Math.sign(targetSpeed);
+    }
+
+    x -= speed;
+
+    // Seamless loop in both directions
+    if (x <= -loopWidth) x += loopWidth;
+    if (x > 0)           x -= loopWidth;
+
+    track.style.transform = `translateX(${x}px)`;
+    requestAnimationFrame(tick);
+  }
+
+  tick();
+
+  // Scroll direction detection
+  let lastY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    targetSpeed = window.scrollY > lastY ? 1 : -1;
+    lastY = window.scrollY;
+  });
+}
+
+/* ─────────────────────────────────
    SCROLL REVEAL
-   Fades elements in as you scroll
 ───────────────────────────────── */
 
 const revealElements = document.querySelectorAll('.reveal');
@@ -8,17 +56,10 @@ const revealElements = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      // Stagger each element slightly
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, i * 90);
-
-      // Stop watching once visible
+      setTimeout(() => entry.target.classList.add('visible'), i * 90);
       observer.unobserve(entry.target);
     }
   });
-}, {
-  threshold: 0.1
-});
+}, { threshold: 0.1 });
 
 revealElements.forEach((el) => observer.observe(el));
