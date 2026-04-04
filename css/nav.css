@@ -1,20 +1,17 @@
 /* ─────────────────────────────────
    NAVIGATION
 ───────────────────────────────── */
-
 nav {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;  /* push links to the right */
   align-items: center;
   padding: 2rem var(--page-gutter);
-  transition: background 0.3s, backdrop-filter 0.3s, border-bottom 0.3s;
 }
-
 /* Logo — your initials */
 .nav-logo {
   font-family: var(--font-sans);
@@ -49,4 +46,18 @@ nav.scrolled {
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--fg-dim);
+}
+
+.nav-logo-fixed {
+  position: fixed;
+  top: 2rem;
+  left: var(--page-gutter);
+  z-index: 200;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg);
+  text-decoration: none;
 }
