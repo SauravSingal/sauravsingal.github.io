@@ -1,7 +1,59 @@
 /* ─────────────────────────────────
    HERO
 ───────────────────────────────── */
+/* Splash Screen */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
 
+  transition: transform 0.8s ease; /* 👈 important */
+}
+
+/* when closing */
+#splash.slide-up {
+  transform: translateY(-100%);
+}
+
+.loading-words {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-words h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 👈 centers perfectly */
+
+  display: none;
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 400;
+}
+
+.loading-words h2.active {
+  display: block;
+}
+
+/* optional dot animation */
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 .hero {
   min-height: 100vh;
   display: flex;
