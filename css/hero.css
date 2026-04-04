@@ -53,8 +53,8 @@
 
 .hero-name-text {
   font-family: var(--font-sans);
-  font-size: clamp(60px, 11vw, 140px);
-  font-weight: 800;
+  font-size: clamp(220px, 11vw, 140px);
+  font-weight: 300;
   letter-spacing: -0.03em;
   color: var(--fg);
   flex-shrink: 0;
