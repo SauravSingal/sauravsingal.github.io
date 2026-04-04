@@ -32,7 +32,7 @@
 
 .about-body {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 2;
   color: var(--fg-muted);
   margin-bottom: 3rem;
