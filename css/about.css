@@ -100,7 +100,7 @@
 
 .skill-name {
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: 2px;
   font-weight: 700;
   color: var(--fg);
   margin-bottom: 0.4rem;
@@ -108,9 +108,9 @@
 
 .skill-desc {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 20px;
   letter-spacing: 0.05em;
-  color: var(--fg-muted);
+  color: rgba(255, 255, 255, 0.8); 
 }
 
 /* Accent bar that slides in on hover */
