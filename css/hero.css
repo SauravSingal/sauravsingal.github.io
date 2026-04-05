@@ -202,7 +202,7 @@ transform: scaleY(1.05);
 }
 
 .spin-arrow {
-  font-size: 22px;
+  font-size: 50px;
   color: var(--bg);
   font-weight: 800;
   line-height: 1;
@@ -232,8 +232,8 @@ transform: scaleY(1.05);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background: var(--accent);
   display: flex;
