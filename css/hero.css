@@ -92,7 +92,7 @@
     overflow: hidden;
   width: 100%;
   padding: 0rem 0;     /* ✅ remove 12rem */
-  margin-top: 8.5rem;    /* ✅ THIS pushes it to bottom */
+  margin-top: 4.5rem;    /* ✅ THIS pushes it to bottom */
 }
 
 .hero-name-inner {
@@ -145,9 +145,9 @@ transform: scaleY(1.05);
 }
 
 .hero-desc {
-  max-width: 460px;
+  max-width: 556px;
   font-family: var(--font-mono);
-  font-size: 19px;
+  font-size: 24px;
   /* line-height: 1.9; */
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.03em;
