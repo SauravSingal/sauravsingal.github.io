@@ -11,6 +11,7 @@ nav {
   justify-content: flex-end;  /* push links to the right */
   align-items: center;
   padding: 2rem var(--page-gutter);
+  padding-bottom: 0;
 }
 /* Logo — your initials */
 .nav-logo {
