@@ -14,17 +14,17 @@ if (track) {
   const loopWidth = track.scrollWidth / 2;
 
   let x           = 0;
-  let speed = 0.8;
-  let targetSpeed = 0.8;
+  let speed = 0.5;
+  let targetSpeed = 0.5;
 
   function tick() {
     // Ease toward target direction
-    speed += (targetSpeed - speed) * 0.04;
+    speed += (targetSpeed - speed) * 0.02;
 
     // Never let it fully stop
     // limiter
-	if (Math.abs(speed) < 0.1) {
-	  speed = 0.1 * Math.sign(targetSpeed);
+	if (Math.abs(speed) < 0.05) {
+	  speed = 0.05 * Math.sign(targetSpeed);
 	}
 
     x -= speed;
@@ -44,7 +44,7 @@ if (track) {
 
   window.addEventListener('scroll', () => {
     // scroll
-	targetSpeed = window.scrollY > lastY ? .8 : -.8;
+	targetSpeed = window.scrollY > lastY ? .5 : -.5;
     lastY = window.scrollY;
   });
 }
