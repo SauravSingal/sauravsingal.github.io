@@ -94,7 +94,7 @@
     overflow: hidden;
   width: 100%;
   padding: 0rem 0;     /* ✅ remove 12rem */
-  margin-top: 1rem;    /* ✅ THIS pushes it to bottom */
+  margin-top: 14rem;    /* ✅ THIS pushes it to bottom */
 }
 
 .hero-name-inner {
@@ -114,7 +114,7 @@
   color: var(--fg);
   flex-shrink: 0;
   padding: 0 2rem;
-transform: scaleY(1.05);
+transform: scaleY(1.1);
 }
 
 .hero-name-sep {
